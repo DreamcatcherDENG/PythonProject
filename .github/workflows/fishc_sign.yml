@@ -1,7 +1,7 @@
 name: Automatic Sign In
 on:
   schedule:
-    - cron: '0/ * 0 * *'
+    - cron: '* * * * *'
 jobs:
   build:
     runs-on: ubuntu-latest

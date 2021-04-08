@@ -1,0 +1,14 @@
+name: Automatic Sign In
+
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string 参见#https://docs.github.com/cn/actions/reference/events-that-trigger-workflows#
+    # *每天12:30运行
+    - cron:  '30/ 23-24 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+     - name: fish sign
+       run: |
+          python fishcsign.py ${secrets.FISHC_COOKIE}

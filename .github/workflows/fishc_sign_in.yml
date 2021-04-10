@@ -9,6 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-     - name: fish sign
-       run: |
-          python fishcsign.py ${secrets.FISHC_COOKIE}
+     - run: |
+         echo "success"
+          

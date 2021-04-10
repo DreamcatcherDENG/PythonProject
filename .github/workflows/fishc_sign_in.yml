@@ -1,4 +1,4 @@
-name: Automatic Sign In
+name: test Sign In
 
 on:
   schedule:

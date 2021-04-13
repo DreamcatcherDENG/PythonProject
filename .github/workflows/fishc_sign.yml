@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: Checkout
-       uses: DreamcatcherDENG/PythonProject/fishcsign.py@master
+       uses: DreamcatcherDENG/PythonProject@ea09affbae848e5dfdf9beae25191affd9dc2a25
      - name: fish sign
        env:
         COOKIE: ${secrets.FISHC_COOKIE}

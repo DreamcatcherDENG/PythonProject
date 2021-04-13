@@ -9,8 +9,7 @@ jobs:
      - uses: actions/checkout@v2
      - name: fish sign
        env:
-        COOKIE: ${secrets.FISHC_COOKIE}
+        COOKIE: ${{secrets.FISHC_COOKIE}}
        run: |
-          echo $COOKIE
-          python fishcsign.py $COOKIE
+          python fishcsign.py ${COOKIE}
 

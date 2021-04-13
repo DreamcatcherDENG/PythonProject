@@ -6,7 +6,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-     - name: Checkout
+       uses: actions/checkout@v2
+     - name: run sign in script
        uses: DreamcatcherDENG/PythonProject@ea09affbae848e5dfdf9beae25191affd9dc2a25
      - name: fish sign
        env:

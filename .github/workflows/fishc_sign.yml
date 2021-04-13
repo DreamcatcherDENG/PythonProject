@@ -6,7 +6,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+     - name: Checkout
+       uses: 
      - name: fish sign
+       env:
+        COOKIE: ${secrets.FISHC_COOKIE
        run: |
-          python fishcsign.py ${secrets.FISHC_COOKIE}
+          python fishcsign.py $COOKIE
 

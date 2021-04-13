@@ -1,7 +1,7 @@
 name: sign In
 on:
   schedule:
-    - cron: '30 0,12 * *'
+    - cron: '30 0 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest

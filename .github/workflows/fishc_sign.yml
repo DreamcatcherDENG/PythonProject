@@ -1,4 +1,4 @@
-name: Automatic Sign In
+name: sign In
 on:
   schedule:
     - cron: '* * * * *'
@@ -11,5 +11,6 @@ jobs:
        env:
         COOKIE: ${secrets.FISHC_COOKIE}
        run: |
+          echo $COOKIE
           python fishcsign.py $COOKIE
 

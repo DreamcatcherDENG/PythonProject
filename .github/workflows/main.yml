@@ -1,0 +1,14 @@
+name: sign In
+on:
+  schedule:
+    - cron: '15 8 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v2
+     - name: fish sign
+       env:
+        COOKIE: ${{secrets.FISHC_COOKIE}}
+       run: |
+          python fishcsign.py ${COOKIE}
